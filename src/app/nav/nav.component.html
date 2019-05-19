@@ -4,7 +4,14 @@
     <nav>
       <ul>
         <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/runapp" (click)="outputFizzBuzz()">RunApp</a></li>
+        <li>
+          <a
+            routerLink="/runapp"
+            value="Call First Component Function"
+            (click)="firstComponentFunction()"
+            >RunApp</a
+          >
+        </li>
       </ul>
     </nav>
   </div>

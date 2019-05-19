@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { EventEmitterService } from "../event-emitter.service";
 
 @Component({
   selector: "app-nav",
@@ -8,7 +9,11 @@ import { Component, OnInit } from "@angular/core";
 export class NavComponent implements OnInit {
   myApp: string = "Fizz Buzz App";
 
-  constructor() {}
+  constructor(private eventEmitterService: EventEmitterService) {}
 
   ngOnInit() {}
+
+  firstComponentFunction() {
+    this.eventEmitterService.onFirstComponentButtonClick();
+  }
 }
