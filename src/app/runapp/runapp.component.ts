@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./runapp.component.css"]
 })
 export class RunappComponent implements OnInit {
-  fizzResult = "this.fizzResult";
+  fizzResult = "";
 
   constructor() {}
 
@@ -36,8 +36,9 @@ export class RunappComponent implements OnInit {
 
   outputFizzBuzz() {
     for (let i = 1; i <= 36; i++) {
-      let fizzResult = [this.fizzBuzz(i)];
-      console.log(fizzResult);
+      let fResults = this.fizzBuzz(i);
+      this.fizzResult += fResults + " ";
+      console.log(fResults);
     }
   }
 }
