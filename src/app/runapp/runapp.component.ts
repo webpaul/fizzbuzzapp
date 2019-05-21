@@ -22,14 +22,14 @@ export class RunappComponent implements OnInit {
       if (i % 3 == 0) {
         retVal += "Fizz";
         notDivBy3 = true;
-        x.push(retVal);
+        x.push(retVal); //This
       }
 
       if (i % 5 == 0) {
         retVal += " Buzz";
         retVal = retVal.trim();
         notDivBy5 = true;
-        x.push(retVal);
+        x.push(retVal); //And this create a bug where for 15 and 30 you get Fizz AND Fizz Buzz
       }
 
       if (notDivBy3 == false && notDivBy5 == false) {
@@ -44,6 +44,7 @@ export class RunappComponent implements OnInit {
   }
 }
 
+//Git keeps source history so no need to leave old code commented out, just blast it
 // fizzBuzz(i) {
 //   let retVal = "";
 //   let notDivBy3 = false;
